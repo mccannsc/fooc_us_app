@@ -1,4 +1,14 @@
 FoocUsApp::Application.routes.draw do
+  get "static_pages/home"
+
+  get "static_pages/about"
+
+  get "static_pages/contact"
+
+  get "static_pages/team"
+
+  get "static_pages/press"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
