@@ -1,3 +1,10 @@
+<!-- if signed in display the counter -->
+<% if signed_in? %>
+       
+       <%= render 'shared/timer' %>
+       <%= render 'shared/test' %>
+
+<% else %>
 
 <!-- The Hero Unit -->
 <div class="center hero-unit">
@@ -51,5 +58,5 @@
                 </li>
                 
               </ul>
-              
-              
+     
+            <% end %>  
