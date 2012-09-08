@@ -1,13 +1,15 @@
 FoocUsApp::Application.routes.draw do
-  get "static_pages/home"
+  get "users/new"
 
-  get "static_pages/about"
-
-  get "static_pages/contact"
-
-  get "static_pages/team"
-
-  get "static_pages/press"
+  root to: 'static_pages#home'
+  
+  match '/signup',        to: 'users#new'
+  
+  match '/about',         to: 'static_pages#about'
+  match '/contact',       to: 'static_pages#contact'
+  match '/team',          to: 'static_pages#team'
+  match '/press',         to: 'static_pages#press'
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
