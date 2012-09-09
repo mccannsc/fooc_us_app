@@ -64,6 +64,7 @@ p {
 }
 
 
+
 /* header */
 
 #logo {
@@ -212,7 +213,7 @@ input, textarea, select, .uneditable-input {
   @extend .control-group;
   @extend .error;
  }
-
+ 
  /* users index */
 
 .users {
@@ -226,6 +227,133 @@ input, textarea, select, .uneditable-input {
       border-bottom: 1px solid $grayLighter;
     }
   }
+}
+
+
+/* Simon edits */
+
+#logos {
+  margin: 0px auto 0 auto;
+  width: 960px;
+  min-height: 60px;
+  background-color: #e4e4e4;
+  background-image: -moz-linear-gradient(top, #eeeeee, #d5d5d5);
+  background-image: -ms-linear-gradient(top, #eeeeee, #d5d5d5);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eeeeee), to(#d5d5d5));
+  background-image: -webkit-linear-gradient(top, #eeeeee, #d5d5d5);
+  background-image: -o-linear-gradient(top, #eeeeee, #d5d5d5);
+  background-image: linear-gradient(top, #eeeeee, #d5d5d5);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#d5d5d5', GradientType=0);
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #d5d5d5;
+  border-bottom: 1px solid #bbbbbb;
+}
+#logos img {
+  float: right;
+  margin: 20px 30px 0 0;
+}
+#logos p {
+  font-family: arial;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 14px 0 0 20px;
+  color: black;
+  /*color: #A5A5A5;*/
+  text-shadow: 0px 1px 0px #fff;
+}
+
+#mini_testimonials{
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+
+p.bubble{
+  background-color: #EEE;
+  padding: 30px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  font-style: italic;
+  font-size: 18px;
+}
+
+p.test_details{
+  font-size: 16px;
+}
+
+p.test_details span{
+  font-style: italic;
+  color: #777;
+}
+
+
+.et-split, .et-split-right{
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.et-split .item, .et-split-right .item{
+  margin: 30px 0px;
+}
+
+.et-split .item .metrics{
+  text-align: center;
+  width: 110px;
+  float: left;
+  margin-right: 25px;
+}
+
+.et-split .item .cta{
+  margin-left: 135px;
+}
+
+.et-split .item .cta p{
+  margin: 10px 0px;
+}
+
+.et-split-right .item .icons{
+  width: 100px;
+  float: left;
+}
+
+.et-split-right .item .cta{
+  margin-left: 100px;
+}
+
+.et-split .item .metrics h1{
+  color: #49AFCD;
+  font-size: 3.4em;
+  margin-bottom: 10px;
+}
+
+.et-split .item .metrics p{
+  color: #777;  
+}
+
+
+.et-split-right{
+  border-left: 1px solid #CCC; 
+  margin-left: 9px; 
+  padding-left: 30px; 
+  width: 440px;
+}
+
+h7 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 36px;
+  font-family: "Crete Round", Helvetica, sans-serif;
+  color: #3E454F;
+  font-weight: bold;
 }
 
 /* Countdown clock */
@@ -313,3 +441,54 @@ input, textarea, select, .uneditable-input {
   top:0.9em;
 }
 
+/* jQuery Countdown styles 1.6.0. */
+.hasCountdown {
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+.countdown_rtl {
+  direction: rtl;
+}
+.countdown_holding span {
+  color: #888;
+}
+.countdown_row {
+  clear: both;
+  width: 100%;
+  padding: 0px 2px;
+  text-align: center;
+}
+.countdown_show1 .countdown_section {
+  width: 98%;
+}
+.countdown_show2 .countdown_section {
+  width: 48%;
+}
+.countdown_show3 .countdown_section {
+  width: 32.5%;
+}
+.countdown_show4 .countdown_section {
+  width: 24.5%;
+}
+.countdown_show5 .countdown_section {
+  width: 19.5%;
+}
+.countdown_show6 .countdown_section {
+  width: 16.25%;
+}
+.countdown_show7 .countdown_section {
+  width: 14%;
+}
+.countdown_section {
+  display: block;
+  float: left;
+  font-size: 75%;
+  text-align: center;
+}
+.countdown_amount {
+  font-size: 200%;
+}
+.countdown_descr {
+  display: block;
+  width: 100%;
+}

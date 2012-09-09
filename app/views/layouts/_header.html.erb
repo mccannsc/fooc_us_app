@@ -1,12 +1,13 @@
+
  <header class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <a class="brand" href="#">Fooc.us</a>
           <nav>
             <ul class="nav pull-right">
-          
-          <% if signed_in? %>
             <li><%= link_to "Home", root_path %></li>
+          <% if signed_in? %>
+            
             <li><%= link_to "Account", edit_user_path(current_user) %></li>
             <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
               </ul>
@@ -20,3 +21,4 @@
         </div>
       </div>
     </header>
+
