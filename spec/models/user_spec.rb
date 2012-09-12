@@ -13,6 +13,7 @@ describe User do
   it { should respond_to(:password_confirmation) }
   it { should respond_to(:remember_token)}
   it { should respond_to(:authenticate) }
+  it { should respond_to(:tasks) }
   
   
   it { should be_valid }
@@ -102,6 +103,21 @@ describe User do
   describe "remember token" do
     before { @user.save }
     its(:remember_token) { should_not be_blank }
+  end
+  
+  describe "task association" do
+    
+    before { @user.save }
+    let!(:older_task) do
+      FactoryGirl.create(:task, user: @user, created_at: 1.day.ago)
+    end
+    let!(:newer_task) do
+      FactoryGirl.create(:task, user: @user, created_at: 1.hour.ago)
+    end
+    
+    it "should have the right task in the right order" do
+      @user.tasks.should == [newer_task, older_task]
+    end
   end
   
 end

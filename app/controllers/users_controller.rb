@@ -21,6 +21,11 @@ class UsersController < ApplicationController
     end
   end
   
+def show
+    @user = User.find(params[:id])
+    @tasks = @user.tasks.paginate(page: params[:page], per_page: 5)
+  end
+  
   def edit
     
   end
@@ -37,12 +42,7 @@ class UsersController < ApplicationController
   
         private
         
-          def signed_in_user
-            unless signed_in?
-              store_location
-            redirect_to signin_url, notice: "Please sign in."
-            end
-          end
+          
           
           def correct_user
             @user = User.find(params[:id])

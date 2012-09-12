@@ -1,7 +1,15 @@
 <div class="center hero-unit">
     <!-- <h1>Get ready to rumble</h1> -->
     
-    <%= link_to "Push the button", user_path(@user), class: "btn btn-success btn-xlarge" %>  
+    <div class="row">
+        <aside class="span5 offset3">
+            <section>
+                <%= render 'shared/task_form' %>
+            </section>
+          </aside>
+        </div>
+    
+   <!-- <%= link_to "Push the button", user_path(@user), class: "btn btn-success btn-xlarge" %>-->  
     
     <br /> <br />
     
