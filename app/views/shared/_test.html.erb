@@ -1,18 +1,21 @@
 <!-- This is the original code from the show.html.erb page. It is here so that it can be rendered when the user is signed in in 2 places> -->
-
+<div class= "logos">
 <h1><%= @user.name %></h1>
+</div>
 
 <!-- Bottom layout. Showing how long we have used the button for and a little motivational picture. -->
 
-<div class="row">
-    <div class="span6 et-split">
-        <h1>So far...</h1>
-        <div class="row item">
-            <div class="metrics">
-              <h1><%= @user.tasks.count %></h1>
-              <p class="et-label">times</p>  
+<div class="middle-page-wrapper">
+    <div class="container">
+    <div class="row">
+        <div class="span6 et-split">
+            <h1>So far...</h1>
+            <div class="row item">
+                <div class="metrics">
+                <h1><%= @user.tasks.count %></h1>
+                <p class="et-label">times</p>  
             </div>
-            <div>
+         <div>
                 <h7>Push the button</h7>
                 <p>So far you have pushed this many times. <br />That's Will Power.</p>
             </div>
@@ -44,7 +47,9 @@
                 </ol>
                 <%= will_paginate @tasks %>
                 <% end %>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 </div>

@@ -2,10 +2,11 @@
  <header class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="#">Fooc.us</a>
+          <a class="brand" href="#">FocusPush</a>
           <nav>
             <ul class="nav pull-right">
             <li><%= link_to "Home", root_path %></li>
+            <li><a href="http://www.simonmccann.co.uk/", target="_blank">Blog</a></li>
           <% if signed_in? %>
             
             <li><%= link_to "Account", edit_user_path(current_user) %></li>
