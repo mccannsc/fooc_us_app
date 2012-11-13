@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
+  caches_page [:home, :about, :contact, :team, :press] 
+  
   def home
     if signed_in?
       @user = current_user
