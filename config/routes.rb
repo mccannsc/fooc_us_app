@@ -1,7 +1,7 @@
 FoocUsApp::Application.routes.draw do
 
   devise_for :admins
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  mount RailsAdmin::Engine => '/rails_admin', :as => 'rails_admin'
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
