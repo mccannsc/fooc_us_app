@@ -26,7 +26,7 @@ $(function(){
                 message += "left until the new year!";
             }
             else {
-                message += "of willpower left to go. Come on you can do it!";
+                message += "of time left on the task. Keep your eyes on the prize";
             }
             
             note.html(message);
