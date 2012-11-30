@@ -9,8 +9,7 @@ $(function(){
         // Notice the *1000 at the end - time must be in milliseconds
         ts = (new Date()).getTime() + 20*60*1000;
         newYear = false;
-    }
-        
+    }    
     $('#countdown').countdown({
         timestamp   : ts,
         callback    : function(days, hours, minutes, seconds){
