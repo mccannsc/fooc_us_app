@@ -828,4 +828,53 @@ h7 {
   border-radius: 3px; 
 }
 
+/* Admin Page */
 
+.admin {
+  display: inline-block;
+  padding: 20px;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.admin_box {
+  border-color: #aaa #ccc #ddd #bbb;
+  border-style: solid;
+  border-width: 5px;  
+  vertical-align: top;
+  display: inline;
+  float: left;
+  margin-left: 10%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  width: 140px;
+  height: 100px;
+}
+
+.admin_box h1 {
+  text-align: center;
+  width: 110px;
+  float: left;
+  margin-right: 25px;
+  color: #0D0C0C;
+  font-size: 3.4em;
+  margin-bottom: 10px;
+}
+
+.admin_box p {
+  text-align: left;
+  padding-top: 5px;
+  padding-left: 5px;
+  color: #0D0C0C;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+ 
