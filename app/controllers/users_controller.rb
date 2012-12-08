@@ -44,6 +44,7 @@ def show
   def index
     @number_of_users = User.count
     @number_of_tasks = Task.count
+   
   end
   
         private
