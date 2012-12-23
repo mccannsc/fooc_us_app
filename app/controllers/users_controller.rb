@@ -22,13 +22,14 @@ class UsersController < ApplicationController
     end
   end
   
-def show
+  def show
     @user = User.find(params[:id])
     @tasks = @user.tasks.paginate(page: params[:page], per_page: 5, total_entries: 25)
+    @task_time =  Task.find_by_user_id(params[:id])
+    gon.time = @task_time.time
   end
   
   def edit
-    
   end
   
   def update
