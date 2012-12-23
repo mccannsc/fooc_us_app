@@ -1,17 +1,21 @@
 <h1 class="center">TIME = LIFE</h1> 
-<h3>Waste your time and waste your life. <br />Master your time and master your life.</h3>
+
     <br />
 
 <%= form_for(@task) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-  	<%= f.text_field :time, placeholder: "How long are you going to work for? Enter a number in minutes." %>
+  	<p>I am going to work for:</p>
+  	<div id ="time_input">
+  	<%= f.text_field :time, placeholder: "Minutes." %>
+  	</div>
+  	<p>and I am going to:</p>
     <%= f.text_area :content, placeholder: "What's your new task..?" %>
   </div>
+  <p>Lets go.</p>
    <%= f.submit "Push the button", class: "btn btn-success btn-xlarge" %>
   
 <% end %>
-
 
 
 
