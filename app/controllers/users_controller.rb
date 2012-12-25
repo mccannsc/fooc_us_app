@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, only: [:edit, :update, :show]
+  before_filter :signed_in_user, only: [:edit, :update, :show, :destroy]
   before_filter :correct_user, only: [:edit, :update, :show]
   before_filter :admin_user, only: :index
   
@@ -27,6 +27,8 @@ class UsersController < ApplicationController
     @tasks = @user.tasks.paginate(page: params[:page], per_page: 5, total_entries: 25)
     @task_time =  Task.find_by_user_id(params[:id])
     gon.time = @task_time.time
+    @user_id = @user.id
+    @task_length = Task.sum(:time, conditions: "user_id = #{@user_id}")
   end
   
   def edit
@@ -45,7 +47,15 @@ class UsersController < ApplicationController
   def index
     @number_of_users = User.count
     @number_of_tasks = Task.count
-   
+  end
+  
+  def destroy
+    @user = User.find(params[:id])
+    @user_id = @user.id
+    @task = Task.find_by_user_id(@user_id)
+    @task.delete
+    flash[:error] = "Fail! You have started to procastinate. Your last task has been deleted."
+    redirect_to root_path
   end
   
         private
