@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
       @task = current_user.tasks.build
       @user_id = @user.id
       @task_length = Task.sum(:time, conditions: "user_id = #{@user_id}")
+      
     end
     
   end

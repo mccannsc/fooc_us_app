@@ -18,20 +18,9 @@
             </li>
           <% else %>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign in <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li id="signin">
-                  	<%= form_for(:session, url: sessions_path) do |f| %>
-                  	<%= f.label :email %>
-      				<%= f.text_field :email %>
-
-      				<%= f.label :password %>
-     				 <%= f.password_field :password %>
-
-      				<%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
-   					 <% end %>
-                  </li>
-                </ul>
+              <%= link_to "Sign in", signin_path, class: "dropdown-toggle" %>
+                
+              
               </li>
           <% end %>
         

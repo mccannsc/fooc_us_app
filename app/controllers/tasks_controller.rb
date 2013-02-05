@@ -3,7 +3,7 @@ class TasksController < ApplicationController
 
   def create
     @user = current_user
-    @task = current_user.tasks.build(params[:task])
+    @task = current_user.tasks.build(params[:task,])
     if @task.save
       flash[:success] = "Task created. Get going!"
       redirect_to user_path(@user)
