@@ -5,13 +5,13 @@
 
 <%= form_for(@task) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div class="field">
+  <div class="">
     <!--<p>I am going to work for:</p>
     <div id ="time_input"> -->
     <%= f.hidden_field :time, value: 20 %>
     <!--</div>  
   	<p>and I am going to:</p> -->
-    <%= f.text_area :content, placeholder: "WRITE THAT HERE! e.g. Start writing the report, call that person, start coding." %>
+    <%= f.text_area :content, class: "form_width", placeholder: "WRITE THAT HERE! e.g. Start writing the report, call that person, start coding." %>
   </div>
   <p>Now do that for 20 minutes!</p>
    <%= f.submit "Push the button", class: "btn btn-success btn-xlarge" %>

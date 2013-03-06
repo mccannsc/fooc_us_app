@@ -20,12 +20,9 @@
 <!-- Product explanation -->
 
    <div id="middle-page-wrapper">  
-   	<ul>
-   		<li><a id="list_one" href="https://twitter.com/launch48", target="_blank"></a></li>
-   		<li><a id="list_two" href="http://www.youtube.com/watch?v=1n5uFGk2pnc", target="_blank"></a></li>
-   		<li><a id="list_three"></a></li>
-    </ul>
-       
+    <h3>Need one last moment of procastination?</h3>
+    <%= link_to image_tag(image_path "qmark.png"), "http://www.youtube.com/watch?v=1n5uFGk2pnc", target: '_blank' %>
+
        <br /><br /><br /><br /><br /><br />
    </div>
     
@@ -36,6 +33,7 @@
       
 <!-- Recommendations / case studies -->    
     <div id="mini_testimonials", class="row">
+      <h3> <%= image_tag(image_path "heart.png") %> FocusPush </h3>
         <div class="span6">
             <p class="bubble">
                 "I use FocusPush when I need time to answer my email. It is a great way to get me focus
