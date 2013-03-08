@@ -10,20 +10,42 @@
 
 <!-- The Hero Unit --> 
 <div class="center hero-unit-new">
-    <h1>Stop wasting time. Start focusing.</h1>
+    <h1>Stop wasting time <%= image_tag("clock.png", :size => "25x25")%>  Start focusing.</h1>
     
     <%= link_to "Sign up", signup_path, class: "btn btn-success btn-xlarge" %>  
 
 </div>
-
+<hr>
 
 <!-- Product explanation -->
 
-   <div id="middle-page-wrapper">  
+   <div id="middle-page-wrapper"> 
+   <h3>This productivity technique gets you into the flow and helps break procastination 
+    habits.</h3> 
+    <h4>When you want to procastinate, you start FocuPush Countodwn and commit to <strong>20 minutes</strong> on one productive action.</h4>
+    <div class="padding"></div>
+     <div class="row-fluid">
+        <div class="span4">
+          <h3>You want to go on Facebook?</h3>
+          <p>Just do 20 first. </p>
+        </div>
+        <div class="span4">
+          <h3>You want a cup of tea?</h3>
+          <p>Just do 20 first.</p>
+          
+       </div>
+        <div class="span4">
+          <h3>You want to watch baby table tennis?</h3>
+          <p>Just do 20 first.</p>
+        </div>
+      </div>
+      <div class="padding"></div>
+      <h4>You build willpower by choosing to stretch your focus just a little bit every day.</h4>
+      <h3>A little extra push goes a long way, besides, it's just 20 minutes!</h3>
+      <%= link_to "Sign up", signup_path, class: "btn btn-success btn-large" %>  
+      <hr>
     <h3>Need one last moment of procastination?</h3>
     <%= link_to image_tag(image_path "qmark.png"), "http://www.youtube.com/watch?v=1n5uFGk2pnc", target: '_blank' %>
-
-       <br /><br /><br /><br /><br /><br />
    </div>
     
     

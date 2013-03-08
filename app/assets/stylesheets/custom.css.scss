@@ -279,7 +279,7 @@ aside {
 
 #middle-page-wrapper {
     background-color: white;
-    height: 150px;
+    height: auto;
     display: block;
     text-align: center;
   
@@ -315,10 +315,19 @@ aside {
  background-position: -220px -440px; 
 }
 
+#middle-page-wrapper h3 {
+  line-height: 2em;
+}
+
+.padding {
+  padding-top: 50px;
+}
+
 
 // Bottom page section
 .bottom-page-wrapper {
-  padding-top: 20px;
+  margin-top: 10px;
+  padding-top: 10px;
   padding-left: 50px;
   background-color: #5bb75b;
   background-image: -moz-linear-gradient(top, #62c462, #51a351);
