@@ -1,0 +1,14 @@
+<h1> test </h1>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$.ajax({
+	type: "GET",
+	url: "http://search.twitter.com/search.json?q=%23launch48",
+	success: function(feed) {
+		document.write(feed);
+	},
+	dataType: 'json'
+});
+</script>

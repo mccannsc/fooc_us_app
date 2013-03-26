@@ -1,6 +1,7 @@
 <h1>Update your profile</h1>
 
-<div id = "signup" class="row">
+<div class="container">
+<div class="span4 offset4">
   
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
@@ -20,4 +21,5 @@
       <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
     <% end %>
   
+</div>
 </div>
