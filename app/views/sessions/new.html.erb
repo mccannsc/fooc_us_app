@@ -1,11 +1,9 @@
-<div class="center">
-<h1>Sign in</h1>
-</div>
-<div class="container">
-<div class="span4 offset4">
+<div class="row">
+<div class="span6 offset4">
   
-    <%= form_for(:session, url: sessions_path) do |f| %>
-
+    <%= form_for(:session, url: sessions_path, html: {class: "well"}) do |f| %>
+    <fieldset>
+    	<legend>Sign in</legend>
       <%= f.label :email %>
       <%= f.text_field :email %>
 
@@ -13,6 +11,7 @@
       <%= f.password_field :password %>
 
       <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+      </fieldset>
     <% end %>
 
     <p>New user? <%= link_to "Sign up now!", signup_path %></p>

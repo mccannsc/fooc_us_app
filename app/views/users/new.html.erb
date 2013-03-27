@@ -1,23 +1,25 @@
 <h1>We pledge to help you get stuff done. No ads, no spam, all free.</h1>
 
-<div class="container">
+<div class="row">
 <div class="span4 offset4">
-    <%= form_for(@user) do |f| %>
+    <%= form_for(@user, html: {class: "well"}) do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
-        
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+      <fieldset>
+        <legend>Sign up.</legend>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
+        <%= f.label :password_confirmation, "Confirmation" %>
+        <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+        <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+      </fieldset>
     <% end %>
  
 </div>
